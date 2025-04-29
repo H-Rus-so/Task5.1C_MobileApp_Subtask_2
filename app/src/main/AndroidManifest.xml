@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.itubeapp">
+    <uses-permission android:name="android.permission.INTERNET"/>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:theme="@style/Theme.ItubeApp">
+
+        <!-- mainactivity screen is launcher -->
+        <activity
+            android:name=".MainActivity"
+            android:exported="true"
+            android:windowSoftInputMode="adjustPan">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- Sign-up screen -->
+        <activity
+            android:name=".AuthRegisterActivity"
+            android:exported="true"/>
+
+        <!-- Home page with URL input and buttons -->
+        <activity
+            android:name=".PlayerHomeActivity"
+            android:exported="false"/>
+
+        <!-- Full-screen video player -->
+        <activity
+            android:name=".VideoPlaybackActivity"
+            android:exported="false"/>
+
+        <!-- Playlist screen showing saved URLs -->
+        <activity
+            android:name=".PlaylistActivity"
+            android:exported="false"/>
+    </application>
+</manifest>
